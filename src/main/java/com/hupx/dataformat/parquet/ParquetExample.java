@@ -80,7 +80,8 @@ public final class ParquetExample {
     }
 
     public static void main(String[] args) throws IOException {
-        String filePath = "/Users/hupx/workspace_trial/dataformats/users.parquet";
+        String filePath = "./users.parquet";
+        System.out.println("Parquet will be written to " + new File(filePath).getAbsolutePath());
 
         ParquetExample avroExample = new ParquetExample();
         avroExample.serialize(filePath);

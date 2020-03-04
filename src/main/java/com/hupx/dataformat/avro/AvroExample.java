@@ -62,7 +62,8 @@ public class AvroExample {
     }
 
     public static void main(String[] args) throws IOException {
-        String filePath = "/Users/hupx/workspace_trial/dataformats/users.avro";
+        String filePath = "./users.avro";
+        System.out.println("Parquet will be written to " + new File(filePath).getAbsolutePath());
 
         AvroExample avroExample = new AvroExample();
         avroExample.serialize(filePath);
