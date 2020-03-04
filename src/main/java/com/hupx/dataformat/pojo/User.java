@@ -3,7 +3,7 @@
  *
  * DO NOT EDIT DIRECTLY
  */
-package com.hupx.dataformat.avro;
+package com.hupx.dataformat.pojo;
 
 import org.apache.avro.generic.GenericArray;
 import org.apache.avro.specific.SpecificData;
@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class User extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 2920219391165397426L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"User\",\"namespace\":\"com.hupx.dataformat.avro\",\"fields\":[{\"name\":\"name\",\"type\":\"string\"},{\"name\":\"height\",\"type\":\"int\"},{\"name\":\"favorite_number\",\"type\":[\"int\",\"null\"]},{\"name\":\"favorite_color\",\"type\":[\"string\",\"null\"]},{\"name\":\"account\",\"type\":{\"type\":\"record\",\"name\":\"Account\",\"fields\":[{\"name\":\"id\",\"type\":\"string\"},{\"name\":\"balance\",\"type\":[\"double\",\"null\"]}]}},{\"name\":\"blogs\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Blog\",\"fields\":[{\"name\":\"id\",\"type\":\"string\"},{\"name\":\"content\",\"type\":\"string\"}]}}}]}");
+  private static final long serialVersionUID = 3490323967621086682L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"User\",\"namespace\":\"com.hupx.dataformat.pojo\",\"fields\":[{\"name\":\"name\",\"type\":\"string\"},{\"name\":\"height\",\"type\":\"int\"},{\"name\":\"favorite_number\",\"type\":[\"int\",\"null\"]},{\"name\":\"favorite_color\",\"type\":[\"string\",\"null\"]},{\"name\":\"account\",\"type\":{\"type\":\"record\",\"name\":\"Account\",\"fields\":[{\"name\":\"id\",\"type\":\"string\"},{\"name\":\"balance\",\"type\":[\"double\",\"null\"]}]}},{\"name\":\"blogs\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Blog\",\"fields\":[{\"name\":\"blog_id\",\"type\":\"string\"},{\"name\":\"content\",\"type\":\"string\"}]}}}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -75,8 +75,8 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
   @Deprecated public int height;
   @Deprecated public java.lang.Integer favorite_number;
   @Deprecated public java.lang.CharSequence favorite_color;
-  @Deprecated public com.hupx.dataformat.avro.Account account;
-  @Deprecated public java.util.List<com.hupx.dataformat.avro.Blog> blogs;
+  @Deprecated public com.hupx.dataformat.pojo.Account account;
+  @Deprecated public java.util.List<com.hupx.dataformat.pojo.Blog> blogs;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -94,7 +94,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
    * @param account The new value for account
    * @param blogs The new value for blogs
    */
-  public User(java.lang.CharSequence name, java.lang.Integer height, java.lang.Integer favorite_number, java.lang.CharSequence favorite_color, com.hupx.dataformat.avro.Account account, java.util.List<com.hupx.dataformat.avro.Blog> blogs) {
+  public User(java.lang.CharSequence name, java.lang.Integer height, java.lang.Integer favorite_number, java.lang.CharSequence favorite_color, com.hupx.dataformat.pojo.Account account, java.util.List<com.hupx.dataformat.pojo.Blog> blogs) {
     this.name = name;
     this.height = height;
     this.favorite_number = favorite_number;
@@ -126,8 +126,8 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
     case 1: height = (java.lang.Integer)value$; break;
     case 2: favorite_number = (java.lang.Integer)value$; break;
     case 3: favorite_color = (java.lang.CharSequence)value$; break;
-    case 4: account = (com.hupx.dataformat.avro.Account)value$; break;
-    case 5: blogs = (java.util.List<com.hupx.dataformat.avro.Blog>)value$; break;
+    case 4: account = (com.hupx.dataformat.pojo.Account)value$; break;
+    case 5: blogs = (java.util.List<com.hupx.dataformat.pojo.Blog>)value$; break;
     default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
   }
@@ -204,7 +204,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
    * Gets the value of the 'account' field.
    * @return The value of the 'account' field.
    */
-  public com.hupx.dataformat.avro.Account getAccount() {
+  public com.hupx.dataformat.pojo.Account getAccount() {
     return account;
   }
 
@@ -213,7 +213,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
    * Sets the value of the 'account' field.
    * @param value the value to set.
    */
-  public void setAccount(com.hupx.dataformat.avro.Account value) {
+  public void setAccount(com.hupx.dataformat.pojo.Account value) {
     this.account = value;
   }
 
@@ -221,7 +221,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
    * Gets the value of the 'blogs' field.
    * @return The value of the 'blogs' field.
    */
-  public java.util.List<com.hupx.dataformat.avro.Blog> getBlogs() {
+  public java.util.List<com.hupx.dataformat.pojo.Blog> getBlogs() {
     return blogs;
   }
 
@@ -230,7 +230,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
    * Sets the value of the 'blogs' field.
    * @param value the value to set.
    */
-  public void setBlogs(java.util.List<com.hupx.dataformat.avro.Blog> value) {
+  public void setBlogs(java.util.List<com.hupx.dataformat.pojo.Blog> value) {
     this.blogs = value;
   }
 
@@ -238,8 +238,8 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
    * Creates a new User RecordBuilder.
    * @return A new User RecordBuilder
    */
-  public static com.hupx.dataformat.avro.User.Builder newBuilder() {
-    return new com.hupx.dataformat.avro.User.Builder();
+  public static com.hupx.dataformat.pojo.User.Builder newBuilder() {
+    return new com.hupx.dataformat.pojo.User.Builder();
   }
 
   /**
@@ -247,11 +247,11 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
    * @param other The existing builder to copy.
    * @return A new User RecordBuilder
    */
-  public static com.hupx.dataformat.avro.User.Builder newBuilder(com.hupx.dataformat.avro.User.Builder other) {
+  public static com.hupx.dataformat.pojo.User.Builder newBuilder(com.hupx.dataformat.pojo.User.Builder other) {
     if (other == null) {
-      return new com.hupx.dataformat.avro.User.Builder();
+      return new com.hupx.dataformat.pojo.User.Builder();
     } else {
-      return new com.hupx.dataformat.avro.User.Builder(other);
+      return new com.hupx.dataformat.pojo.User.Builder(other);
     }
   }
 
@@ -260,11 +260,11 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
    * @param other The existing instance to copy.
    * @return A new User RecordBuilder
    */
-  public static com.hupx.dataformat.avro.User.Builder newBuilder(com.hupx.dataformat.avro.User other) {
+  public static com.hupx.dataformat.pojo.User.Builder newBuilder(com.hupx.dataformat.pojo.User other) {
     if (other == null) {
-      return new com.hupx.dataformat.avro.User.Builder();
+      return new com.hupx.dataformat.pojo.User.Builder();
     } else {
-      return new com.hupx.dataformat.avro.User.Builder(other);
+      return new com.hupx.dataformat.pojo.User.Builder(other);
     }
   }
 
@@ -279,9 +279,9 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
     private int height;
     private java.lang.Integer favorite_number;
     private java.lang.CharSequence favorite_color;
-    private com.hupx.dataformat.avro.Account account;
-    private com.hupx.dataformat.avro.Account.Builder accountBuilder;
-    private java.util.List<com.hupx.dataformat.avro.Blog> blogs;
+    private com.hupx.dataformat.pojo.Account account;
+    private com.hupx.dataformat.pojo.Account.Builder accountBuilder;
+    private java.util.List<com.hupx.dataformat.pojo.Blog> blogs;
 
     /** Creates a new Builder */
     private Builder() {
@@ -292,7 +292,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(com.hupx.dataformat.avro.User.Builder other) {
+    private Builder(com.hupx.dataformat.pojo.User.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.name)) {
         this.name = data().deepCopy(fields()[0].schema(), other.name);
@@ -315,7 +315,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
         fieldSetFlags()[4] = other.fieldSetFlags()[4];
       }
       if (other.hasAccountBuilder()) {
-        this.accountBuilder = com.hupx.dataformat.avro.Account.newBuilder(other.getAccountBuilder());
+        this.accountBuilder = com.hupx.dataformat.pojo.Account.newBuilder(other.getAccountBuilder());
       }
       if (isValidValue(fields()[5], other.blogs)) {
         this.blogs = data().deepCopy(fields()[5].schema(), other.blogs);
@@ -327,7 +327,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
      * Creates a Builder by copying an existing User instance
      * @param other The existing instance to copy.
      */
-    private Builder(com.hupx.dataformat.avro.User other) {
+    private Builder(com.hupx.dataformat.pojo.User other) {
       super(SCHEMA$);
       if (isValidValue(fields()[0], other.name)) {
         this.name = data().deepCopy(fields()[0].schema(), other.name);
@@ -370,7 +370,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
       * @param value The value of 'name'.
       * @return This builder.
       */
-    public com.hupx.dataformat.avro.User.Builder setName(java.lang.CharSequence value) {
+    public com.hupx.dataformat.pojo.User.Builder setName(java.lang.CharSequence value) {
       validate(fields()[0], value);
       this.name = value;
       fieldSetFlags()[0] = true;
@@ -390,7 +390,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
       * Clears the value of the 'name' field.
       * @return This builder.
       */
-    public com.hupx.dataformat.avro.User.Builder clearName() {
+    public com.hupx.dataformat.pojo.User.Builder clearName() {
       name = null;
       fieldSetFlags()[0] = false;
       return this;
@@ -410,7 +410,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
       * @param value The value of 'height'.
       * @return This builder.
       */
-    public com.hupx.dataformat.avro.User.Builder setHeight(int value) {
+    public com.hupx.dataformat.pojo.User.Builder setHeight(int value) {
       validate(fields()[1], value);
       this.height = value;
       fieldSetFlags()[1] = true;
@@ -430,7 +430,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
       * Clears the value of the 'height' field.
       * @return This builder.
       */
-    public com.hupx.dataformat.avro.User.Builder clearHeight() {
+    public com.hupx.dataformat.pojo.User.Builder clearHeight() {
       fieldSetFlags()[1] = false;
       return this;
     }
@@ -449,7 +449,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
       * @param value The value of 'favorite_number'.
       * @return This builder.
       */
-    public com.hupx.dataformat.avro.User.Builder setFavoriteNumber(java.lang.Integer value) {
+    public com.hupx.dataformat.pojo.User.Builder setFavoriteNumber(java.lang.Integer value) {
       validate(fields()[2], value);
       this.favorite_number = value;
       fieldSetFlags()[2] = true;
@@ -469,7 +469,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
       * Clears the value of the 'favorite_number' field.
       * @return This builder.
       */
-    public com.hupx.dataformat.avro.User.Builder clearFavoriteNumber() {
+    public com.hupx.dataformat.pojo.User.Builder clearFavoriteNumber() {
       favorite_number = null;
       fieldSetFlags()[2] = false;
       return this;
@@ -489,7 +489,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
       * @param value The value of 'favorite_color'.
       * @return This builder.
       */
-    public com.hupx.dataformat.avro.User.Builder setFavoriteColor(java.lang.CharSequence value) {
+    public com.hupx.dataformat.pojo.User.Builder setFavoriteColor(java.lang.CharSequence value) {
       validate(fields()[3], value);
       this.favorite_color = value;
       fieldSetFlags()[3] = true;
@@ -509,7 +509,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
       * Clears the value of the 'favorite_color' field.
       * @return This builder.
       */
-    public com.hupx.dataformat.avro.User.Builder clearFavoriteColor() {
+    public com.hupx.dataformat.pojo.User.Builder clearFavoriteColor() {
       favorite_color = null;
       fieldSetFlags()[3] = false;
       return this;
@@ -519,7 +519,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
       * Gets the value of the 'account' field.
       * @return The value.
       */
-    public com.hupx.dataformat.avro.Account getAccount() {
+    public com.hupx.dataformat.pojo.Account getAccount() {
       return account;
     }
 
@@ -529,7 +529,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
       * @param value The value of 'account'.
       * @return This builder.
       */
-    public com.hupx.dataformat.avro.User.Builder setAccount(com.hupx.dataformat.avro.Account value) {
+    public com.hupx.dataformat.pojo.User.Builder setAccount(com.hupx.dataformat.pojo.Account value) {
       validate(fields()[4], value);
       this.accountBuilder = null;
       this.account = value;
@@ -549,12 +549,12 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
      * Gets the Builder instance for the 'account' field and creates one if it doesn't exist yet.
      * @return This builder.
      */
-    public com.hupx.dataformat.avro.Account.Builder getAccountBuilder() {
+    public com.hupx.dataformat.pojo.Account.Builder getAccountBuilder() {
       if (accountBuilder == null) {
         if (hasAccount()) {
-          setAccountBuilder(com.hupx.dataformat.avro.Account.newBuilder(account));
+          setAccountBuilder(com.hupx.dataformat.pojo.Account.newBuilder(account));
         } else {
-          setAccountBuilder(com.hupx.dataformat.avro.Account.newBuilder());
+          setAccountBuilder(com.hupx.dataformat.pojo.Account.newBuilder());
         }
       }
       return accountBuilder;
@@ -565,7 +565,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
      * @param value The builder instance that must be set.
      * @return This builder.
      */
-    public com.hupx.dataformat.avro.User.Builder setAccountBuilder(com.hupx.dataformat.avro.Account.Builder value) {
+    public com.hupx.dataformat.pojo.User.Builder setAccountBuilder(com.hupx.dataformat.pojo.Account.Builder value) {
       clearAccount();
       accountBuilder = value;
       return this;
@@ -583,7 +583,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
       * Clears the value of the 'account' field.
       * @return This builder.
       */
-    public com.hupx.dataformat.avro.User.Builder clearAccount() {
+    public com.hupx.dataformat.pojo.User.Builder clearAccount() {
       account = null;
       accountBuilder = null;
       fieldSetFlags()[4] = false;
@@ -594,7 +594,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
       * Gets the value of the 'blogs' field.
       * @return The value.
       */
-    public java.util.List<com.hupx.dataformat.avro.Blog> getBlogs() {
+    public java.util.List<com.hupx.dataformat.pojo.Blog> getBlogs() {
       return blogs;
     }
 
@@ -604,7 +604,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
       * @param value The value of 'blogs'.
       * @return This builder.
       */
-    public com.hupx.dataformat.avro.User.Builder setBlogs(java.util.List<com.hupx.dataformat.avro.Blog> value) {
+    public com.hupx.dataformat.pojo.User.Builder setBlogs(java.util.List<com.hupx.dataformat.pojo.Blog> value) {
       validate(fields()[5], value);
       this.blogs = value;
       fieldSetFlags()[5] = true;
@@ -624,7 +624,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
       * Clears the value of the 'blogs' field.
       * @return This builder.
       */
-    public com.hupx.dataformat.avro.User.Builder clearBlogs() {
+    public com.hupx.dataformat.pojo.User.Builder clearBlogs() {
       blogs = null;
       fieldSetFlags()[5] = false;
       return this;
@@ -647,9 +647,9 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
             throw e;
           }
         } else {
-          record.account = fieldSetFlags()[4] ? this.account : (com.hupx.dataformat.avro.Account) defaultValue(fields()[4]);
+          record.account = fieldSetFlags()[4] ? this.account : (com.hupx.dataformat.pojo.Account) defaultValue(fields()[4]);
         }
-        record.blogs = fieldSetFlags()[5] ? this.blogs : (java.util.List<com.hupx.dataformat.avro.Blog>) defaultValue(fields()[5]);
+        record.blogs = fieldSetFlags()[5] ? this.blogs : (java.util.List<com.hupx.dataformat.pojo.Blog>) defaultValue(fields()[5]);
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
         throw e;
@@ -708,7 +708,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
     out.writeArrayStart();
     out.setItemCount(size0);
     long actualSize0 = 0;
-    for (com.hupx.dataformat.avro.Blog e0: this.blogs) {
+    for (com.hupx.dataformat.pojo.Blog e0: this.blogs) {
       actualSize0++;
       out.startItem();
       e0.customEncode(out);
@@ -743,22 +743,22 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
       }
 
       if (this.account == null) {
-        this.account = new com.hupx.dataformat.avro.Account();
+        this.account = new com.hupx.dataformat.pojo.Account();
       }
       this.account.customDecode(in);
 
       long size0 = in.readArrayStart();
-      java.util.List<com.hupx.dataformat.avro.Blog> a0 = this.blogs;
+      java.util.List<com.hupx.dataformat.pojo.Blog> a0 = this.blogs;
       if (a0 == null) {
-        a0 = new SpecificData.Array<com.hupx.dataformat.avro.Blog>((int)size0, SCHEMA$.getField("blogs").schema());
+        a0 = new SpecificData.Array<com.hupx.dataformat.pojo.Blog>((int)size0, SCHEMA$.getField("blogs").schema());
         this.blogs = a0;
       } else a0.clear();
-      SpecificData.Array<com.hupx.dataformat.avro.Blog> ga0 = (a0 instanceof SpecificData.Array ? (SpecificData.Array<com.hupx.dataformat.avro.Blog>)a0 : null);
+      SpecificData.Array<com.hupx.dataformat.pojo.Blog> ga0 = (a0 instanceof SpecificData.Array ? (SpecificData.Array<com.hupx.dataformat.pojo.Blog>)a0 : null);
       for ( ; 0 < size0; size0 = in.arrayNext()) {
         for ( ; size0 != 0; size0--) {
-          com.hupx.dataformat.avro.Blog e0 = (ga0 != null ? ga0.peek() : null);
+          com.hupx.dataformat.pojo.Blog e0 = (ga0 != null ? ga0.peek() : null);
           if (e0 == null) {
-            e0 = new com.hupx.dataformat.avro.Blog();
+            e0 = new com.hupx.dataformat.pojo.Blog();
           }
           e0.customDecode(in);
           a0.add(e0);
@@ -796,24 +796,24 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
 
         case 4:
           if (this.account == null) {
-            this.account = new com.hupx.dataformat.avro.Account();
+            this.account = new com.hupx.dataformat.pojo.Account();
           }
           this.account.customDecode(in);
           break;
 
         case 5:
           long size0 = in.readArrayStart();
-          java.util.List<com.hupx.dataformat.avro.Blog> a0 = this.blogs;
+          java.util.List<com.hupx.dataformat.pojo.Blog> a0 = this.blogs;
           if (a0 == null) {
-            a0 = new SpecificData.Array<com.hupx.dataformat.avro.Blog>((int)size0, SCHEMA$.getField("blogs").schema());
+            a0 = new SpecificData.Array<com.hupx.dataformat.pojo.Blog>((int)size0, SCHEMA$.getField("blogs").schema());
             this.blogs = a0;
           } else a0.clear();
-          SpecificData.Array<com.hupx.dataformat.avro.Blog> ga0 = (a0 instanceof SpecificData.Array ? (SpecificData.Array<com.hupx.dataformat.avro.Blog>)a0 : null);
+          SpecificData.Array<com.hupx.dataformat.pojo.Blog> ga0 = (a0 instanceof SpecificData.Array ? (SpecificData.Array<com.hupx.dataformat.pojo.Blog>)a0 : null);
           for ( ; 0 < size0; size0 = in.arrayNext()) {
             for ( ; size0 != 0; size0--) {
-              com.hupx.dataformat.avro.Blog e0 = (ga0 != null ? ga0.peek() : null);
+              com.hupx.dataformat.pojo.Blog e0 = (ga0 != null ? ga0.peek() : null);
               if (e0 == null) {
-                e0 = new com.hupx.dataformat.avro.Blog();
+                e0 = new com.hupx.dataformat.pojo.Blog();
               }
               e0.customDecode(in);
               a0.add(e0);

@@ -3,7 +3,7 @@
  *
  * DO NOT EDIT DIRECTLY
  */
-package com.hupx.dataformat.avro;
+package com.hupx.dataformat.pojo;
 
 import org.apache.avro.generic.GenericArray;
 import org.apache.avro.specific.SpecificData;
@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Blog extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -4755058155995363190L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Blog\",\"namespace\":\"com.hupx.dataformat.avro\",\"fields\":[{\"name\":\"id\",\"type\":\"string\"},{\"name\":\"content\",\"type\":\"string\"}]}");
+  private static final long serialVersionUID = 8770498698059278376L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Blog\",\"namespace\":\"com.hupx.dataformat.pojo\",\"fields\":[{\"name\":\"blog_id\",\"type\":\"string\"},{\"name\":\"content\",\"type\":\"string\"}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -71,7 +71,7 @@ public class Blog extends org.apache.avro.specific.SpecificRecordBase implements
     return DECODER.decode(b);
   }
 
-  @Deprecated public java.lang.CharSequence id;
+  @Deprecated public java.lang.CharSequence blog_id;
   @Deprecated public java.lang.CharSequence content;
 
   /**
@@ -83,11 +83,11 @@ public class Blog extends org.apache.avro.specific.SpecificRecordBase implements
 
   /**
    * All-args constructor.
-   * @param id The new value for id
+   * @param blog_id The new value for blog_id
    * @param content The new value for content
    */
-  public Blog(java.lang.CharSequence id, java.lang.CharSequence content) {
-    this.id = id;
+  public Blog(java.lang.CharSequence blog_id, java.lang.CharSequence content) {
+    this.blog_id = blog_id;
     this.content = content;
   }
 
@@ -96,7 +96,7 @@ public class Blog extends org.apache.avro.specific.SpecificRecordBase implements
   // Used by DatumWriter.  Applications should not call.
   public java.lang.Object get(int field$) {
     switch (field$) {
-    case 0: return id;
+    case 0: return blog_id;
     case 1: return content;
     default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
@@ -106,27 +106,27 @@ public class Blog extends org.apache.avro.specific.SpecificRecordBase implements
   @SuppressWarnings(value="unchecked")
   public void put(int field$, java.lang.Object value$) {
     switch (field$) {
-    case 0: id = (java.lang.CharSequence)value$; break;
+    case 0: blog_id = (java.lang.CharSequence)value$; break;
     case 1: content = (java.lang.CharSequence)value$; break;
     default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
   }
 
   /**
-   * Gets the value of the 'id' field.
-   * @return The value of the 'id' field.
+   * Gets the value of the 'blog_id' field.
+   * @return The value of the 'blog_id' field.
    */
-  public java.lang.CharSequence getId() {
-    return id;
+  public java.lang.CharSequence getBlogId() {
+    return blog_id;
   }
 
 
   /**
-   * Sets the value of the 'id' field.
+   * Sets the value of the 'blog_id' field.
    * @param value the value to set.
    */
-  public void setId(java.lang.CharSequence value) {
-    this.id = value;
+  public void setBlogId(java.lang.CharSequence value) {
+    this.blog_id = value;
   }
 
   /**
@@ -150,8 +150,8 @@ public class Blog extends org.apache.avro.specific.SpecificRecordBase implements
    * Creates a new Blog RecordBuilder.
    * @return A new Blog RecordBuilder
    */
-  public static com.hupx.dataformat.avro.Blog.Builder newBuilder() {
-    return new com.hupx.dataformat.avro.Blog.Builder();
+  public static com.hupx.dataformat.pojo.Blog.Builder newBuilder() {
+    return new com.hupx.dataformat.pojo.Blog.Builder();
   }
 
   /**
@@ -159,11 +159,11 @@ public class Blog extends org.apache.avro.specific.SpecificRecordBase implements
    * @param other The existing builder to copy.
    * @return A new Blog RecordBuilder
    */
-  public static com.hupx.dataformat.avro.Blog.Builder newBuilder(com.hupx.dataformat.avro.Blog.Builder other) {
+  public static com.hupx.dataformat.pojo.Blog.Builder newBuilder(com.hupx.dataformat.pojo.Blog.Builder other) {
     if (other == null) {
-      return new com.hupx.dataformat.avro.Blog.Builder();
+      return new com.hupx.dataformat.pojo.Blog.Builder();
     } else {
-      return new com.hupx.dataformat.avro.Blog.Builder(other);
+      return new com.hupx.dataformat.pojo.Blog.Builder(other);
     }
   }
 
@@ -172,11 +172,11 @@ public class Blog extends org.apache.avro.specific.SpecificRecordBase implements
    * @param other The existing instance to copy.
    * @return A new Blog RecordBuilder
    */
-  public static com.hupx.dataformat.avro.Blog.Builder newBuilder(com.hupx.dataformat.avro.Blog other) {
+  public static com.hupx.dataformat.pojo.Blog.Builder newBuilder(com.hupx.dataformat.pojo.Blog other) {
     if (other == null) {
-      return new com.hupx.dataformat.avro.Blog.Builder();
+      return new com.hupx.dataformat.pojo.Blog.Builder();
     } else {
-      return new com.hupx.dataformat.avro.Blog.Builder(other);
+      return new com.hupx.dataformat.pojo.Blog.Builder(other);
     }
   }
 
@@ -187,7 +187,7 @@ public class Blog extends org.apache.avro.specific.SpecificRecordBase implements
   public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<Blog>
     implements org.apache.avro.data.RecordBuilder<Blog> {
 
-    private java.lang.CharSequence id;
+    private java.lang.CharSequence blog_id;
     private java.lang.CharSequence content;
 
     /** Creates a new Builder */
@@ -199,10 +199,10 @@ public class Blog extends org.apache.avro.specific.SpecificRecordBase implements
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(com.hupx.dataformat.avro.Blog.Builder other) {
+    private Builder(com.hupx.dataformat.pojo.Blog.Builder other) {
       super(other);
-      if (isValidValue(fields()[0], other.id)) {
-        this.id = data().deepCopy(fields()[0].schema(), other.id);
+      if (isValidValue(fields()[0], other.blog_id)) {
+        this.blog_id = data().deepCopy(fields()[0].schema(), other.blog_id);
         fieldSetFlags()[0] = other.fieldSetFlags()[0];
       }
       if (isValidValue(fields()[1], other.content)) {
@@ -215,10 +215,10 @@ public class Blog extends org.apache.avro.specific.SpecificRecordBase implements
      * Creates a Builder by copying an existing Blog instance
      * @param other The existing instance to copy.
      */
-    private Builder(com.hupx.dataformat.avro.Blog other) {
+    private Builder(com.hupx.dataformat.pojo.Blog other) {
       super(SCHEMA$);
-      if (isValidValue(fields()[0], other.id)) {
-        this.id = data().deepCopy(fields()[0].schema(), other.id);
+      if (isValidValue(fields()[0], other.blog_id)) {
+        this.blog_id = data().deepCopy(fields()[0].schema(), other.blog_id);
         fieldSetFlags()[0] = true;
       }
       if (isValidValue(fields()[1], other.content)) {
@@ -228,41 +228,41 @@ public class Blog extends org.apache.avro.specific.SpecificRecordBase implements
     }
 
     /**
-      * Gets the value of the 'id' field.
+      * Gets the value of the 'blog_id' field.
       * @return The value.
       */
-    public java.lang.CharSequence getId() {
-      return id;
+    public java.lang.CharSequence getBlogId() {
+      return blog_id;
     }
 
 
     /**
-      * Sets the value of the 'id' field.
-      * @param value The value of 'id'.
+      * Sets the value of the 'blog_id' field.
+      * @param value The value of 'blog_id'.
       * @return This builder.
       */
-    public com.hupx.dataformat.avro.Blog.Builder setId(java.lang.CharSequence value) {
+    public com.hupx.dataformat.pojo.Blog.Builder setBlogId(java.lang.CharSequence value) {
       validate(fields()[0], value);
-      this.id = value;
+      this.blog_id = value;
       fieldSetFlags()[0] = true;
       return this;
     }
 
     /**
-      * Checks whether the 'id' field has been set.
-      * @return True if the 'id' field has been set, false otherwise.
+      * Checks whether the 'blog_id' field has been set.
+      * @return True if the 'blog_id' field has been set, false otherwise.
       */
-    public boolean hasId() {
+    public boolean hasBlogId() {
       return fieldSetFlags()[0];
     }
 
 
     /**
-      * Clears the value of the 'id' field.
+      * Clears the value of the 'blog_id' field.
       * @return This builder.
       */
-    public com.hupx.dataformat.avro.Blog.Builder clearId() {
-      id = null;
+    public com.hupx.dataformat.pojo.Blog.Builder clearBlogId() {
+      blog_id = null;
       fieldSetFlags()[0] = false;
       return this;
     }
@@ -281,7 +281,7 @@ public class Blog extends org.apache.avro.specific.SpecificRecordBase implements
       * @param value The value of 'content'.
       * @return This builder.
       */
-    public com.hupx.dataformat.avro.Blog.Builder setContent(java.lang.CharSequence value) {
+    public com.hupx.dataformat.pojo.Blog.Builder setContent(java.lang.CharSequence value) {
       validate(fields()[1], value);
       this.content = value;
       fieldSetFlags()[1] = true;
@@ -301,7 +301,7 @@ public class Blog extends org.apache.avro.specific.SpecificRecordBase implements
       * Clears the value of the 'content' field.
       * @return This builder.
       */
-    public com.hupx.dataformat.avro.Blog.Builder clearContent() {
+    public com.hupx.dataformat.pojo.Blog.Builder clearContent() {
       content = null;
       fieldSetFlags()[1] = false;
       return this;
@@ -312,7 +312,7 @@ public class Blog extends org.apache.avro.specific.SpecificRecordBase implements
     public Blog build() {
       try {
         Blog record = new Blog();
-        record.id = fieldSetFlags()[0] ? this.id : (java.lang.CharSequence) defaultValue(fields()[0]);
+        record.blog_id = fieldSetFlags()[0] ? this.blog_id : (java.lang.CharSequence) defaultValue(fields()[0]);
         record.content = fieldSetFlags()[1] ? this.content : (java.lang.CharSequence) defaultValue(fields()[1]);
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
@@ -346,7 +346,7 @@ public class Blog extends org.apache.avro.specific.SpecificRecordBase implements
   @Override public void customEncode(org.apache.avro.io.Encoder out)
     throws java.io.IOException
   {
-    out.writeString(this.id);
+    out.writeString(this.blog_id);
 
     out.writeString(this.content);
 
@@ -357,7 +357,7 @@ public class Blog extends org.apache.avro.specific.SpecificRecordBase implements
   {
     org.apache.avro.Schema.Field[] fieldOrder = in.readFieldOrderIfDiff();
     if (fieldOrder == null) {
-      this.id = in.readString(this.id instanceof Utf8 ? (Utf8)this.id : null);
+      this.blog_id = in.readString(this.blog_id instanceof Utf8 ? (Utf8)this.blog_id : null);
 
       this.content = in.readString(this.content instanceof Utf8 ? (Utf8)this.content : null);
 
@@ -365,7 +365,7 @@ public class Blog extends org.apache.avro.specific.SpecificRecordBase implements
       for (int i = 0; i < 2; i++) {
         switch (fieldOrder[i].pos()) {
         case 0:
-          this.id = in.readString(this.id instanceof Utf8 ? (Utf8)this.id : null);
+          this.blog_id = in.readString(this.blog_id instanceof Utf8 ? (Utf8)this.blog_id : null);
           break;
 
         case 1:

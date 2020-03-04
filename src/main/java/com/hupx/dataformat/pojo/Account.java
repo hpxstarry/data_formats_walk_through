@@ -3,7 +3,7 @@
  *
  * DO NOT EDIT DIRECTLY
  */
-package com.hupx.dataformat.avro;
+package com.hupx.dataformat.pojo;
 
 import org.apache.avro.generic.GenericArray;
 import org.apache.avro.specific.SpecificData;
@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Account extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -871036397066598626L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Account\",\"namespace\":\"com.hupx.dataformat.avro\",\"fields\":[{\"name\":\"id\",\"type\":\"string\"},{\"name\":\"balance\",\"type\":[\"double\",\"null\"]}]}");
+  private static final long serialVersionUID = 494693773561033980L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Account\",\"namespace\":\"com.hupx.dataformat.pojo\",\"fields\":[{\"name\":\"id\",\"type\":\"string\"},{\"name\":\"balance\",\"type\":[\"double\",\"null\"]}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -150,8 +150,8 @@ public class Account extends org.apache.avro.specific.SpecificRecordBase impleme
    * Creates a new Account RecordBuilder.
    * @return A new Account RecordBuilder
    */
-  public static com.hupx.dataformat.avro.Account.Builder newBuilder() {
-    return new com.hupx.dataformat.avro.Account.Builder();
+  public static com.hupx.dataformat.pojo.Account.Builder newBuilder() {
+    return new com.hupx.dataformat.pojo.Account.Builder();
   }
 
   /**
@@ -159,11 +159,11 @@ public class Account extends org.apache.avro.specific.SpecificRecordBase impleme
    * @param other The existing builder to copy.
    * @return A new Account RecordBuilder
    */
-  public static com.hupx.dataformat.avro.Account.Builder newBuilder(com.hupx.dataformat.avro.Account.Builder other) {
+  public static com.hupx.dataformat.pojo.Account.Builder newBuilder(com.hupx.dataformat.pojo.Account.Builder other) {
     if (other == null) {
-      return new com.hupx.dataformat.avro.Account.Builder();
+      return new com.hupx.dataformat.pojo.Account.Builder();
     } else {
-      return new com.hupx.dataformat.avro.Account.Builder(other);
+      return new com.hupx.dataformat.pojo.Account.Builder(other);
     }
   }
 
@@ -172,11 +172,11 @@ public class Account extends org.apache.avro.specific.SpecificRecordBase impleme
    * @param other The existing instance to copy.
    * @return A new Account RecordBuilder
    */
-  public static com.hupx.dataformat.avro.Account.Builder newBuilder(com.hupx.dataformat.avro.Account other) {
+  public static com.hupx.dataformat.pojo.Account.Builder newBuilder(com.hupx.dataformat.pojo.Account other) {
     if (other == null) {
-      return new com.hupx.dataformat.avro.Account.Builder();
+      return new com.hupx.dataformat.pojo.Account.Builder();
     } else {
-      return new com.hupx.dataformat.avro.Account.Builder(other);
+      return new com.hupx.dataformat.pojo.Account.Builder(other);
     }
   }
 
@@ -199,7 +199,7 @@ public class Account extends org.apache.avro.specific.SpecificRecordBase impleme
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(com.hupx.dataformat.avro.Account.Builder other) {
+    private Builder(com.hupx.dataformat.pojo.Account.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.id)) {
         this.id = data().deepCopy(fields()[0].schema(), other.id);
@@ -215,7 +215,7 @@ public class Account extends org.apache.avro.specific.SpecificRecordBase impleme
      * Creates a Builder by copying an existing Account instance
      * @param other The existing instance to copy.
      */
-    private Builder(com.hupx.dataformat.avro.Account other) {
+    private Builder(com.hupx.dataformat.pojo.Account other) {
       super(SCHEMA$);
       if (isValidValue(fields()[0], other.id)) {
         this.id = data().deepCopy(fields()[0].schema(), other.id);
@@ -241,7 +241,7 @@ public class Account extends org.apache.avro.specific.SpecificRecordBase impleme
       * @param value The value of 'id'.
       * @return This builder.
       */
-    public com.hupx.dataformat.avro.Account.Builder setId(java.lang.CharSequence value) {
+    public com.hupx.dataformat.pojo.Account.Builder setId(java.lang.CharSequence value) {
       validate(fields()[0], value);
       this.id = value;
       fieldSetFlags()[0] = true;
@@ -261,7 +261,7 @@ public class Account extends org.apache.avro.specific.SpecificRecordBase impleme
       * Clears the value of the 'id' field.
       * @return This builder.
       */
-    public com.hupx.dataformat.avro.Account.Builder clearId() {
+    public com.hupx.dataformat.pojo.Account.Builder clearId() {
       id = null;
       fieldSetFlags()[0] = false;
       return this;
@@ -281,7 +281,7 @@ public class Account extends org.apache.avro.specific.SpecificRecordBase impleme
       * @param value The value of 'balance'.
       * @return This builder.
       */
-    public com.hupx.dataformat.avro.Account.Builder setBalance(java.lang.Double value) {
+    public com.hupx.dataformat.pojo.Account.Builder setBalance(java.lang.Double value) {
       validate(fields()[1], value);
       this.balance = value;
       fieldSetFlags()[1] = true;
@@ -301,7 +301,7 @@ public class Account extends org.apache.avro.specific.SpecificRecordBase impleme
       * Clears the value of the 'balance' field.
       * @return This builder.
       */
-    public com.hupx.dataformat.avro.Account.Builder clearBalance() {
+    public com.hupx.dataformat.pojo.Account.Builder clearBalance() {
       balance = null;
       fieldSetFlags()[1] = false;
       return this;

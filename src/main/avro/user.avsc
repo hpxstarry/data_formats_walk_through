@@ -1,5 +1,5 @@
 {
-  "namespace": "com.hupx.dataformat.avro",
+  "namespace": "com.hupx.dataformat.pojo",
   "type": "record",
   "name": "User",
   "fields": [
@@ -54,7 +54,7 @@
           "type": "record",
           "fields": [
             {
-              "name": "id",
+              "name": "blog_id",
               "type": "string"
             },
             {

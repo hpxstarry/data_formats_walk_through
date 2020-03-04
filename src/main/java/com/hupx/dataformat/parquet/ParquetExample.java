@@ -1,7 +1,7 @@
 package com.hupx.dataformat.parquet;
 
-import com.hupx.dataformat.avro.User;
 import com.hupx.dataformat.avro.Users;
+import com.hupx.dataformat.pojo.User;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
 import org.apache.parquet.avro.AvroParquetReader;
