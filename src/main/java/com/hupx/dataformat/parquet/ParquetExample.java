@@ -23,6 +23,7 @@ import org.apache.parquet.avro.AvroParquetWriter;
 import org.apache.parquet.hadoop.ParquetReader;
 import org.apache.parquet.hadoop.ParquetWriter;
 import org.apache.parquet.hadoop.metadata.CompressionCodecName;
+import org.apache.parquet.hadoop.util.HadoopInputFile;
 
 import java.io.File;
 import java.io.IOException;
@@ -68,7 +69,7 @@ public final class ParquetExample {
     public void deserialize(String filePath) throws IOException {
         Path path = new Path(filePath);
         try (ParquetReader<User> reader = AvroParquetReader
-                .<User>builder(path)
+                .<User>builder(HadoopInputFile.fromPath(path, new Configuration()))
                 .withConf(new Configuration())
                 .build()) {
             User user;
