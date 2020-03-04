@@ -1,19 +1,69 @@
-{"namespace": "com.hupx.dataformat.avro",
+{
+  "namespace": "com.hupx.dataformat.avro",
   "type": "record",
   "name": "User",
   "fields": [
-    {"name": "name", "type": "string"},
-    {"name": "height",  "type": "int"},
-    {"name": "favorite_number",  "type": ["int", "null"]},
-    {"name": "favorite_color", "type": ["string", "null"]},
-    {"name": "account", "type": {
-            "type": "record",
-            "name": "Account",
-            "fields": [
-                {"name": "id", "type": "string"},
-                {"name": "balance",  "type": ["double", "null"]}
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "height",
+      "type": "int"
+    },
+    {
+      "name": "favorite_number",
+      "type": [
+        "int",
+        "null"
+      ]
+    },
+    {
+      "name": "favorite_color",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    {
+      "name": "account",
+      "type": {
+        "type": "record",
+        "name": "Account",
+        "fields": [
+          {
+            "name": "id",
+            "type": "string"
+          },
+          {
+            "name": "balance",
+            "type": [
+              "double",
+              "null"
             ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "blogs",
+      "type": {
+        "type": "array",
+        "items": {
+          "name": "Blog",
+          "type": "record",
+          "fields": [
+            {
+              "name": "id",
+              "type": "string"
+            },
+            {
+              "name": "content",
+              "type": "string"
+            }
+          ]
         }
+      }
     }
   ]
 }

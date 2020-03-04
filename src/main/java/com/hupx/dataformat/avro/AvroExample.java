@@ -17,34 +17,16 @@ import java.io.IOException;
  * 2) serialize/deserialize of multiple records
  */
 public class AvroExample {
-    private User user1;
-    private User user2;
-
     public AvroExample() {
-        this.user1 = User.newBuilder()
-                .setFavoriteColor("RED")
-                .setHeight(5)
-                .setName("Jack")
-                .setFavoriteNumber(1)
-                .setAccount(Account.newBuilder().setId("1").setBalance(10.0).build())
-                .build();
-
-        this.user2 = User.newBuilder()
-                .setFavoriteColor("Blue")
-                .setHeight(6)
-                .setName("King")
-                .setFavoriteNumber(1)
-                .setAccount(Account.newBuilder().setId("2").setBalance(11.0).build())
-                .build();
 
     }
 
     public void serialize(String filePath) throws IOException {
         DatumWriter<User> userDatumWriter = new SpecificDatumWriter<>(User.class);
         try (DataFileWriter<User> dataFileWriter = new DataFileWriter<>(userDatumWriter)) {
-            dataFileWriter.create(user1.getSchema(), new File(filePath));
-            dataFileWriter.append(user1);
-            dataFileWriter.append(user2);
+            dataFileWriter.create(Users.USER1.getSchema(), new File(filePath));
+            dataFileWriter.append(Users.USER1);
+            dataFileWriter.append(Users.USER2);
         }
     }
 

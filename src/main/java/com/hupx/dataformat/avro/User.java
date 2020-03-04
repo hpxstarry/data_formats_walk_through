@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class User extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -4172584574344037128L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"User\",\"namespace\":\"com.hupx.dataformat.avro\",\"fields\":[{\"name\":\"name\",\"type\":\"string\"},{\"name\":\"height\",\"type\":\"int\"},{\"name\":\"favorite_number\",\"type\":[\"int\",\"null\"]},{\"name\":\"favorite_color\",\"type\":[\"string\",\"null\"]},{\"name\":\"account\",\"type\":{\"type\":\"record\",\"name\":\"Account\",\"fields\":[{\"name\":\"id\",\"type\":\"string\"},{\"name\":\"balance\",\"type\":[\"double\",\"null\"]}]}}]}");
+  private static final long serialVersionUID = 2920219391165397426L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"User\",\"namespace\":\"com.hupx.dataformat.avro\",\"fields\":[{\"name\":\"name\",\"type\":\"string\"},{\"name\":\"height\",\"type\":\"int\"},{\"name\":\"favorite_number\",\"type\":[\"int\",\"null\"]},{\"name\":\"favorite_color\",\"type\":[\"string\",\"null\"]},{\"name\":\"account\",\"type\":{\"type\":\"record\",\"name\":\"Account\",\"fields\":[{\"name\":\"id\",\"type\":\"string\"},{\"name\":\"balance\",\"type\":[\"double\",\"null\"]}]}},{\"name\":\"blogs\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Blog\",\"fields\":[{\"name\":\"id\",\"type\":\"string\"},{\"name\":\"content\",\"type\":\"string\"}]}}}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -76,6 +76,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
   @Deprecated public java.lang.Integer favorite_number;
   @Deprecated public java.lang.CharSequence favorite_color;
   @Deprecated public com.hupx.dataformat.avro.Account account;
+  @Deprecated public java.util.List<com.hupx.dataformat.avro.Blog> blogs;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -91,13 +92,15 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
    * @param favorite_number The new value for favorite_number
    * @param favorite_color The new value for favorite_color
    * @param account The new value for account
+   * @param blogs The new value for blogs
    */
-  public User(java.lang.CharSequence name, java.lang.Integer height, java.lang.Integer favorite_number, java.lang.CharSequence favorite_color, com.hupx.dataformat.avro.Account account) {
+  public User(java.lang.CharSequence name, java.lang.Integer height, java.lang.Integer favorite_number, java.lang.CharSequence favorite_color, com.hupx.dataformat.avro.Account account, java.util.List<com.hupx.dataformat.avro.Blog> blogs) {
     this.name = name;
     this.height = height;
     this.favorite_number = favorite_number;
     this.favorite_color = favorite_color;
     this.account = account;
+    this.blogs = blogs;
   }
 
   public org.apache.avro.specific.SpecificData getSpecificData() { return MODEL$; }
@@ -110,6 +113,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
     case 2: return favorite_number;
     case 3: return favorite_color;
     case 4: return account;
+    case 5: return blogs;
     default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
   }
@@ -123,6 +127,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
     case 2: favorite_number = (java.lang.Integer)value$; break;
     case 3: favorite_color = (java.lang.CharSequence)value$; break;
     case 4: account = (com.hupx.dataformat.avro.Account)value$; break;
+    case 5: blogs = (java.util.List<com.hupx.dataformat.avro.Blog>)value$; break;
     default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
   }
@@ -213,6 +218,23 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
   }
 
   /**
+   * Gets the value of the 'blogs' field.
+   * @return The value of the 'blogs' field.
+   */
+  public java.util.List<com.hupx.dataformat.avro.Blog> getBlogs() {
+    return blogs;
+  }
+
+
+  /**
+   * Sets the value of the 'blogs' field.
+   * @param value the value to set.
+   */
+  public void setBlogs(java.util.List<com.hupx.dataformat.avro.Blog> value) {
+    this.blogs = value;
+  }
+
+  /**
    * Creates a new User RecordBuilder.
    * @return A new User RecordBuilder
    */
@@ -259,6 +281,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
     private java.lang.CharSequence favorite_color;
     private com.hupx.dataformat.avro.Account account;
     private com.hupx.dataformat.avro.Account.Builder accountBuilder;
+    private java.util.List<com.hupx.dataformat.avro.Blog> blogs;
 
     /** Creates a new Builder */
     private Builder() {
@@ -294,6 +317,10 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
       if (other.hasAccountBuilder()) {
         this.accountBuilder = com.hupx.dataformat.avro.Account.newBuilder(other.getAccountBuilder());
       }
+      if (isValidValue(fields()[5], other.blogs)) {
+        this.blogs = data().deepCopy(fields()[5].schema(), other.blogs);
+        fieldSetFlags()[5] = other.fieldSetFlags()[5];
+      }
     }
 
     /**
@@ -323,6 +350,10 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
         fieldSetFlags()[4] = true;
       }
       this.accountBuilder = null;
+      if (isValidValue(fields()[5], other.blogs)) {
+        this.blogs = data().deepCopy(fields()[5].schema(), other.blogs);
+        fieldSetFlags()[5] = true;
+      }
     }
 
     /**
@@ -559,6 +590,46 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
       return this;
     }
 
+    /**
+      * Gets the value of the 'blogs' field.
+      * @return The value.
+      */
+    public java.util.List<com.hupx.dataformat.avro.Blog> getBlogs() {
+      return blogs;
+    }
+
+
+    /**
+      * Sets the value of the 'blogs' field.
+      * @param value The value of 'blogs'.
+      * @return This builder.
+      */
+    public com.hupx.dataformat.avro.User.Builder setBlogs(java.util.List<com.hupx.dataformat.avro.Blog> value) {
+      validate(fields()[5], value);
+      this.blogs = value;
+      fieldSetFlags()[5] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'blogs' field has been set.
+      * @return True if the 'blogs' field has been set, false otherwise.
+      */
+    public boolean hasBlogs() {
+      return fieldSetFlags()[5];
+    }
+
+
+    /**
+      * Clears the value of the 'blogs' field.
+      * @return This builder.
+      */
+    public com.hupx.dataformat.avro.User.Builder clearBlogs() {
+      blogs = null;
+      fieldSetFlags()[5] = false;
+      return this;
+    }
+
     @Override
     @SuppressWarnings("unchecked")
     public User build() {
@@ -578,6 +649,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
         } else {
           record.account = fieldSetFlags()[4] ? this.account : (com.hupx.dataformat.avro.Account) defaultValue(fields()[4]);
         }
+        record.blogs = fieldSetFlags()[5] ? this.blogs : (java.util.List<com.hupx.dataformat.avro.Blog>) defaultValue(fields()[5]);
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
         throw e;
@@ -632,6 +704,19 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
 
     this.account.customEncode(out);
 
+    long size0 = this.blogs.size();
+    out.writeArrayStart();
+    out.setItemCount(size0);
+    long actualSize0 = 0;
+    for (com.hupx.dataformat.avro.Blog e0: this.blogs) {
+      actualSize0++;
+      out.startItem();
+      e0.customEncode(out);
+    }
+    out.writeArrayEnd();
+    if (actualSize0 != size0)
+      throw new java.util.ConcurrentModificationException("Array-size written was " + size0 + ", but element count was " + actualSize0 + ".");
+
   }
 
   @Override public void customDecode(org.apache.avro.io.ResolvingDecoder in)
@@ -662,8 +747,26 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
       }
       this.account.customDecode(in);
 
+      long size0 = in.readArrayStart();
+      java.util.List<com.hupx.dataformat.avro.Blog> a0 = this.blogs;
+      if (a0 == null) {
+        a0 = new SpecificData.Array<com.hupx.dataformat.avro.Blog>((int)size0, SCHEMA$.getField("blogs").schema());
+        this.blogs = a0;
+      } else a0.clear();
+      SpecificData.Array<com.hupx.dataformat.avro.Blog> ga0 = (a0 instanceof SpecificData.Array ? (SpecificData.Array<com.hupx.dataformat.avro.Blog>)a0 : null);
+      for ( ; 0 < size0; size0 = in.arrayNext()) {
+        for ( ; size0 != 0; size0--) {
+          com.hupx.dataformat.avro.Blog e0 = (ga0 != null ? ga0.peek() : null);
+          if (e0 == null) {
+            e0 = new com.hupx.dataformat.avro.Blog();
+          }
+          e0.customDecode(in);
+          a0.add(e0);
+        }
+      }
+
     } else {
-      for (int i = 0; i < 5; i++) {
+      for (int i = 0; i < 6; i++) {
         switch (fieldOrder[i].pos()) {
         case 0:
           this.name = in.readString(this.name instanceof Utf8 ? (Utf8)this.name : null);
@@ -696,6 +799,26 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
             this.account = new com.hupx.dataformat.avro.Account();
           }
           this.account.customDecode(in);
+          break;
+
+        case 5:
+          long size0 = in.readArrayStart();
+          java.util.List<com.hupx.dataformat.avro.Blog> a0 = this.blogs;
+          if (a0 == null) {
+            a0 = new SpecificData.Array<com.hupx.dataformat.avro.Blog>((int)size0, SCHEMA$.getField("blogs").schema());
+            this.blogs = a0;
+          } else a0.clear();
+          SpecificData.Array<com.hupx.dataformat.avro.Blog> ga0 = (a0 instanceof SpecificData.Array ? (SpecificData.Array<com.hupx.dataformat.avro.Blog>)a0 : null);
+          for ( ; 0 < size0; size0 = in.arrayNext()) {
+            for ( ; size0 != 0; size0--) {
+              com.hupx.dataformat.avro.Blog e0 = (ga0 != null ? ga0.peek() : null);
+              if (e0 == null) {
+                e0 = new com.hupx.dataformat.avro.Blog();
+              }
+              e0.customDecode(in);
+              a0.add(e0);
+            }
+          }
           break;
 
         default:
